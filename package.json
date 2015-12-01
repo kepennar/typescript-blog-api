@@ -1,0 +1,51 @@
+{
+  "name": "recipes-server",
+  "version": "0.0.1",
+  "description": "A mongoDB back express api for storing and serve recipes.",
+  "author": {
+    "name": "Kevin Pennarun",
+    "email": "kevin.pennarun@gmail.com",
+    "url": "kevin-pennarun.org"
+  },
+  "repository": "kepennar/recipes-server",
+  "license": "MIT",
+  "files": [
+    "dist/index.js"
+  ],
+  "keywords": [
+    "reciepes",
+    "api"
+  ],
+  "main": "cli.js",
+  "dependencies": {
+    "bluebird": "^3.0.5",
+    "body-parser": "^1.14",
+    "colors": "^1.1.0",
+    "commander": "^2.8.1",
+    "compression": "^1.6",
+    "config": "^1.17.1",
+    "connect-timeout": "^1.7.0",
+    "express": "^4.13",
+    "mongoose": "^4.2",
+    "morgan": "^1.6",
+    "rethinkdb": "^2.2.0",
+    "thinky": "^2.2.0",
+    "winston": "^2.1"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-nodemon": "^2.0.4",
+    "gulp-shell": "^0.5.1",
+    "gulp-tslint": "^3.5.0",
+    "gulp-typescript": "^2.9.2",
+    "run-sequence": "^1.1.4",
+    "tsd": "^0.6.5"
+  },
+  "scripts": {
+    "postinstall": "node_modules/gulp/bin/gulp.js build",
+    "start": "./cli.js"
+  },
+  "bin": {
+    "main": "gulp buildrun"
+  }
+}

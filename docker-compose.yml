@@ -1,0 +1,26 @@
+web:
+  build: .
+  ports:
+    - "80:8080"
+  environment:
+    NODE_ENV: production
+    PORT: 8080
+  volumes:
+    - .:/home/app
+  links:
+    - db
+
+db:
+  image: rethinkdb
+  ports:
+    - "8081:8080"
+  volumes_from:
+    - dbData
+
+# It is recommended to use a separate container for data volumes. 
+# This provides some benefits, for e.g., the db container can be upgraded without affecting the data
+dbData:
+  image: busybox
+  volumes:
+    - /data
+  command: echo Data Volume for db

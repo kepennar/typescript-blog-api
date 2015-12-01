@@ -1,0 +1,7 @@
+node_modules/
+.tmp/
+dist/
+/.project
+.private
+.vscode/
+all.log
