@@ -1,6 +1,5 @@
-# Feedbacks manager.
+# Typescript-blog-api
 
-## Bouchons de l'API Esign et du protocol OpenTrust
 
 ## Install
 
@@ -11,9 +10,18 @@ $ npm install
 
 ## Usage
 
+### Command Line
 ```sh
-# With default port : 3000
-$ ./cli.js
+# With default port : 8080
+$ npm start
 # Or 
-$ ./cli.js --port 8080
+$ ./cli.js
+
+# With specific port
+$ ./cli.js --port 8765
+```
+
+### Docker
+```sh
+docker-compose up
 ```
